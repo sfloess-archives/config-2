@@ -20,6 +20,12 @@ doLocalMount() {
 
     mount /dev/sda1 /tmp/mnt/sda1
     mount /dev/sdb1 /tmp/mnt/sdb1
+
+    mkdir -p /tmp/mnt/sdb1/debian/exports/sda1
+    mkdir -p /tmp/mnt/sdb1/debian/exports/sdb1
+
+    mount /dev/sda1 /tmp/mnt/sdb1/debian/exports/sda1
+    mount /dev/sdb1 /tmp/mnt/sdb1/debian/exports/sdb1
 }
 
 doRemoteMount() {
@@ -27,7 +33,6 @@ doRemoteMount() {
 }
 
 doMount() {
-    #doSwap
     doLocalMount
     doRemoteMount
 }
