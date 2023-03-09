@@ -6,7 +6,7 @@
 # Debian folder
 CHROOT_DIR=`readlink -f /tmp/mnt/sdb1/debian`
 
-CHROOT_SERVICES_LIST=$CHROOT_DIR/chroot-services.list
+CHROOT_SERVICES_LIST=/tmp/mnt/sdb1/dd-wrt/chroot-services.list
 
 CHROOT_BIN=`which chroot`
 
